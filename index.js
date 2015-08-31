@@ -10,5 +10,8 @@ module.exports = {
 		app.import(app.bowerDirectory + '/moment/min/moment.min.js')
     app.import(app.bowerDirectory + '/fullcalendar/dist/fullcalendar.min.js');
     app.import(app.bowerDirectory + '/fullcalendar/dist/fullcalendar.min.css');
+  },
+  isDevelopingAddon: function () {
+    return true;
   }
 };
