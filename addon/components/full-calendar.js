@@ -88,6 +88,10 @@ export default Ember.Component.extend({
         _this.sendAction('eventResizeStop', event, jsEvent, ui, view);
       },
 
+      select: function(start, end, jsEvent, view) {
+        _this.sendAction('select', start, end, jsEvent, view);
+      },
+
       // Dragging & Resizing
       editable: _this.get('editable'),
       eventStartEditable: _this.get('eventStartEditable'),
