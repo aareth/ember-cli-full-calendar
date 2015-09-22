@@ -19,7 +19,7 @@ export default Ember.Component.extend({
   fixedWeekCount: true,
   weekNumbers: false,
   height: 'auto',
-
+  columnFormat: 'ddd',
   // Event Dragging & Resizing
   editable: false,
   eventStartEditable: false,
@@ -51,7 +51,7 @@ export default Ember.Component.extend({
       fixedWeekCount: _this.get('fixedWeekCount'),
       weekNumbers: _this.get('weekNumbers'),
       height: _this.get('height'),
-
+      columnFormat: _this.get('columnFormat'),
       // Selection
       selectable: _this.get('selectable'),
       unselectAuto: _this.get('unselectAuto'),
