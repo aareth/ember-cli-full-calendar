@@ -40,7 +40,7 @@ export default Ember.Component.extend({
     if (eventSource != null) {
       eventSources.forEach(function(eventSource) {
         fullCalendarComponent.fullCalendar('addEventSource', eventSource);
-      }
+      });
     } else {
       fullCalendarComponent.fullCalendar('addEventSource', this.get('events'));
     }
