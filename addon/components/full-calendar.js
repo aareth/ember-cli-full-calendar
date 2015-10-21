@@ -33,6 +33,20 @@ export default Ember.Component.extend({
   selectable: false,
   unselectAuto: true,
 
+  updateEvents: function() {
+    var fullCalendarComponent = Ember.$(".full-calendar");
+    fullCalendarComponent.fullCalendar('removeEvents');
+    var eventSources = this.get('eventSources')
+    if (eventSource != null) {
+      eventSources.forEach(function(eventSource) {
+        fullCalendarComponent.fullCalendar('addEventSource', eventSource);
+      }
+    } else {
+      fullCalendarComponent.fullCalendar('addEventSource', this.get('events'));
+    }
+    fullCalendarComponent.fullCalendar('rerenderEvents' );
+  }.observes('events'),
+
   _initializeCalendar: function() {
     var _this = this;
     return Ember.$(".full-calendar").fullCalendar({
@@ -58,6 +72,8 @@ export default Ember.Component.extend({
 
       // Event Data
       events: _this.get('events'),
+
+      eventSources: _this.get('eventSources'),
 
       // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
