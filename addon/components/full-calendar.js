@@ -112,6 +112,9 @@ export default Ember.Component.extend({
       },
 
 
+      dayRender: _this.get('dayRender'),
+
+
       // Dragging & Resizing
       editable: _this.get('editable'),
       eventStartEditable: _this.get('eventStartEditable'),
