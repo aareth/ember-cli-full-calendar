@@ -49,10 +49,11 @@ export default Ember.Component.extend({
 
   _initializeCalendar: function() {
     var _this = this;
+    console.log("header left: ", _this.get('headerLeft'));
     return Ember.$(".full-calendar").fullCalendar({
 
       // General Display
-      console.log("header left: ", _this.get('headerLeft'));
+
       header: {
         left: _this.get('headerLeft'),
         center: _this.get('headerCenter'),
