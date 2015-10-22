@@ -76,6 +76,8 @@ export default Ember.Component.extend({
 
       eventSources: _this.get('eventSources'),
 
+      customButtons: _this.get('customButtons'),
+
       // Clicking & Hovering
       eventClick: function(calEvent, jsEvent, view) {
         _this.sendAction('eventClick', calEvent, jsEvent, view);
