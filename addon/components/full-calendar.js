@@ -111,6 +111,7 @@ export default Ember.Component.extend({
         _this.sendAction('select', start, end, jsEvent, view);
       },
 
+
       // Dragging & Resizing
       editable: _this.get('editable'),
       eventStartEditable: _this.get('eventStartEditable'),
@@ -119,7 +120,7 @@ export default Ember.Component.extend({
       dragOpacity: _this.get('dragOpacity'),
       dragScroll: _this.get('dragScroll'),
 
-      dayRender: _this.get('dayRender');
+
     });
   }.on('didInsertElement'),
 });
