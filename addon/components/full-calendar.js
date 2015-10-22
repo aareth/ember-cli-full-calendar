@@ -118,6 +118,8 @@ export default Ember.Component.extend({
       dragRevertDuration: _this.get('dragRevertDuration'),
       dragOpacity: _this.get('dragOpacity'),
       dragScroll: _this.get('dragScroll'),
+
+      dayRender: _this.get('dayRender');
     });
   }.on('didInsertElement'),
 });
